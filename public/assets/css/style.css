@@ -1,20 +1,70 @@
-.my-container {
-  background-color: blueviolet;
+body, html {
+  height: 100%;
 }
+.bg { 
+  /* The image used */
+  background-image: url(../images/burger-background.jpg);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* LOGO */
+.logo {
+  font-size: 10vh;
+  color: #ed2530;
+  background-color: #f8df1f;
+  padding: 15px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.logo-border {
+  background-color: #ed2530;
+  padding: 8px;
+  -ms-transform: rotate(-3deg); /* IE 9 */
+  -webkit-transform: rotate(-3deg); /* Safari */
+  transform: rotate(-3deg); /* Standard syntax */
+}
+.my-container {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* GENERAL */
+.b-border {
+  border: 2px solid black;
+}
+
+/* CHALK BOARD */
 ul {
   list-style-type: none;
 }
-
-/* .label {
-  font-weight: bold;
+.chalk-board {
+  background: #777a83;
+}
+.chalk-board-border {
+  background: #ed2530;
+  padding: 8px;
+}
+.chalk {
+  font-family: 'Covered By Your Grace', cursive;
+  color: whitesmoke;
+  opacity: 0.9;
+}
+.f-3vh {
+  font-size: 3vh;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+/* ORDER DIV */
+.kitchen-window-border {
+  background: #040C75;
+  padding: 8px;
+  max-width: 50%;
 }
-
-.form-group {
-  margin-bottom: 5px;
-} */
+.kitchen {
+  background: #fdf6c2;
+}

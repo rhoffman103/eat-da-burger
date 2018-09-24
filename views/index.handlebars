@@ -1,47 +1,72 @@
 <div class="container my-container">
   
   <div class="d-flex justify-content-center">
-    <h1>Eat Da Burger!</h1>
+    <div class="logo-border b-border d-inline-flex m-5">
+      <h1 class="logo b-border">Eat Da Burger!</h1>
+    </div>
   </div>
 
   <div class="row">
     
     <div class="col-md-6">
-      <h2 class="text-center">Menu</h2>
-      <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        {{> burgers/burger-block devoured=true}}
-        {{/unless}}
-        {{/each}}
-      </ul>
+      <div class="chalk-board-border b-border">
+        <div class="chalk-board b-border">
+          <h2 class="text-center chalk">Menu</h2>
+          <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            {{!-- {{> burgers/burger-block devoured=true}} --}}
+              <li class="row">
+                <p class="col-8 chalk f-3vh">{{burger_name}}</p>
+                <div class="col-4">
+                  <button class="change-devour" data-id="{{id}}" data-eaten="{{devoured}}">
+                    Eat Me!
+                  </button>
+                </div>
+              </li>
+            {{/unless}}
+            {{/each}}
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="col-md-6">
-      <h2 class="text-center">Eaten Burgers</h2>
-      <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        {{> burgers/burger-block devoured=false}}
-        {{/if}}
-        {{/each}}
-      </ul>
+      <div class="chalk-board-border b-border">
+        <div class="chalk-board p-2 b-border">
+          <h2 class="text-center chalk">Eaten Burgers</h2>
+          <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+              <li class="row">
+                <p class="chalk f-3vh">{{burger_name}}</p>
+              </li>
+            {{/if}}
+            {{/each}}
+          </ul>
+        </div>
+      </div>
     </div>
 
   </div>
 
-  <h2 class="d-flex justify-content-center">Create Your Own Burger!</h2>
-  <form class="create-form mb-5">
+  <div class="d-flex justify-content-center">
+    <div class="kitchen-window-border b-border mt-5">
+      <div class="kitchen b-border p-4">
+        <h2 class="d-flex justify-content-center">Create Your Own Burger!</h2>
+        <form class="create-form mb-5">
 
-    <div class="form-group d-flex justify-content-center">
-      <label for="burg">Burger Name:</label>
-      <input type="text" id="burg" name="name">
+          <div class="form-group d-flex justify-content-center">
+            <label for="burg">Burger Name:</label>
+            <input type="text" id="burg" name="name">
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <button type="submit">Add Burger to Menu</button>
+          </div>
+
+        </form>
+      </div>
     </div>
-
-    <div class="d-flex justify-content-center">
-      <button type="submit">Add Burger to Menu</button>
-    </div>
-
-  </form>
-
+  </div>
 </div>
